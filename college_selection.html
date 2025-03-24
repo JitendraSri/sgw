@@ -1,0 +1,62 @@
+<!-- College & Course Selection -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College & Course Selection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .container { max-width: 900px; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Select Your College & Course</h2>
+        <div class="row mt-4">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Select College</label>
+                <select id="collegeSelect" class="form-select">
+                    <option value="Harvard University">Harvard University</option>
+                    <option value="Stanford University">Stanford University</option>
+                    <option value="MIT">Massachusetts Institute of Technology (MIT)</option>
+                    <option value="Oxford University">University of Oxford</option>
+                    <option value="Cambridge University">University of Cambridge</option>
+                    <option value="Toronto University">University of Toronto</option>
+                    <option value="Melbourne University">University of Melbourne</option>
+                    <option value="Technical University Munich">Technical University of Munich</option>
+                    <option value="Sorbonne University">Sorbonne University</option>
+                    <option value="National University Singapore">National University of Singapore</option>
+                </select>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Select Course</label>
+                <select id="courseSelect" class="form-select">
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Business Administration">Business Administration</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Medicine">Medicine</option>
+                    <option value="Law">Law</option>
+                    <option value="Psychology">Psychology</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Artificial Intelligence">Artificial Intelligence</option>
+                    <option value="Biotechnology">Biotechnology</option>
+                </select>
+            </div>
+        </div>
+        <button onclick="proceedEnrollment()" class="btn btn-primary w-100">Proceed to Enrollment</button>
+    </div>
+
+    <script>
+        function proceedEnrollment() {
+            let college = document.getElementById("collegeSelect").value;
+            let course = document.getElementById("courseSelect").value;
+            alert("You selected " + college + " - " + course);
+            window.location.href = 'enrollment.html?college=' + encodeURIComponent(college) + '&course=' + encodeURIComponent(course);
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

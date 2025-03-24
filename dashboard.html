@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard | GSAC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">GSAC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tracking.html">Tracking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="payment.html">Payments</a></li>
+                    <li class="nav-item"><a class="nav-link text-danger" href="index.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Welcome, <span id="user-name">Student</span>!</h2>
+        <p class="text-center">Manage your application and stay updated on your study abroad journey.</p>
+
+        <div class="row">
+            <!-- Profile Section -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <div class="card-body text-center">
+                        <img src="user.png" class="rounded-circle mb-3" width="80" alt="User Profile">
+                        <h5 id="profile-name">John Doe</h5>
+                        <p id="profile-email">johndoe@gmail.com</p>
+                        <a href="index.html" class="btn btn-sm btn-outline-primary">Edit Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application Status -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <div class="card-body text-center">
+                        <h5>Application Status</h5>
+                        <p class="text-warning" id="app-status">Pending</p>
+                        <a href="tracking.html" class="btn btn-sm btn-primary">Track Application</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Saved Colleges -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <div class="card-body text-center">
+                        <h5>Saved Colleges</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Harvard University</li>
+                            <li class="list-group-item">Stanford University</li>
+                        </ul>
+                        <a href="destination.html" class="btn btn-sm btn-primary mt-2">Explore More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <!-- Payment Status -->
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body text-center">
+                        <h5>Payment Status</h5>
+                        <p class="text-danger" id="payment-status">Not Paid</p>
+                        <a href="payment.html" class="btn btn-sm btn-primary">Proceed to Payment</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support Section -->
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body text-center">
+                        <h5>Need Help?</h5>
+                        <p>Contact our support team for assistance.</p>
+                        <a href="index.html" class="btn btn-sm btn-outline-primary">Get Support</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 Global Students Abroad Council. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("user-name").innerText = "John Doe";  // Replace with actual user data
+        document.getElementById("app-status").innerText = "Pending"; // Fetch actual status
+        document.getElementById("payment-status").innerText = "Not Paid"; // Fetch payment status
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
